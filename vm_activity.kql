@@ -1,0 +1,5 @@
+resourcechanges
+| where properties.targetResourceType =~ "Microsoft.Compute/virtualmachines"
+| where type == "microsoft.resources/changes"
+| where properties.targetResourceType =~ "Microsoft.Compute/virtualmachines"
+| project id, resourceid = properties.targetResourceId, properties.changeType, properties
